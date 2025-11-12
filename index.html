@@ -159,7 +159,7 @@
 
     // Share button — uses Web Share API if available, else copies URL (or shows message)
     document.getElementById('shareBtn').addEventListener('click', async ()=>{
-      const shareData={title:'Πρόσκληση — Άννα & Ελένη', text:'Έλα στο πάρτυ των Άννα & Ελένη — 22/11, 17:30 στο Pizza Place!', url:location.href};
+      const shareData={title:'Πρόσκληση — Άρσινοη & Μαρία', text:'Έλα στο πάρτυ των Αρσινόη & Μαρία — 15/11, 17:30 στο Pizza Place!', url:location.href};
       if(navigator.share){try{await navigator.share(shareData);}catch(e){alert('Η κοινοποίηση ακυρώθηκε.')}}else{try{await navigator.clipboard.writeText(`${shareData.text} \n${shareData.url}`); alert('Κείμενο προσκλητηρίου αντιγράφηκε στο πρόχειρο — επικόλληση όπου θες!');}catch(e){alert('Μη διαθέσιμο το πρόχειρο. Μπορείς να αντιγράψεις τη σελίδα ή να στείλεις το αρχείο .html.')}}
     });
 
